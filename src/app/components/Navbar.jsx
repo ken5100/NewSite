@@ -56,8 +56,8 @@ const Navbar = () => {
 
           {/* Icons */}
           <div className="flex items-center gap-2 sm:gap-3 md:gap-4">
-            <Image src="/cart.svg" alt="Cart" width={30} height={30} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
-            <Image src="/profile.svg" alt="Profile" width={30} height={30} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+            <Image src="/Cart.svg" alt="Cart" width={30} height={30} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+            <Image src="/Profile.svg" alt="Profile" width={30} height={30} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
           </div>
 
           {/* Mobile Menu Button */}
