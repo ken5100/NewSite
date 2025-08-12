@@ -22,7 +22,7 @@ export default function Slider() {
   }, []);
 
   return (
-    <div className="relative w-full flex items-start justify-center overflow-hidden bg-transparent">
+    <div className="relative w-full flex items-start justify-center overflow-hidden bg-transparent hide-scrollbar">
       {/* Slider Image */}
       <Image
         src={slides[currentSlide]}

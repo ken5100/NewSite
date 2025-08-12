@@ -59,7 +59,7 @@ export default function PopularCategories() {
       {/* Main container */}
       <div
         className="rounded-3xl bg-white/60 backdrop-blur-md w-[90%] max-w-[1200px] h-auto 
-                   flex gap-6 md:gap-10 p-4 md:p-8 overflow-x-auto scrollbar-hide"
+                   flex gap-6 md:gap-10 p-4 md:p-8 overflow-x-auto hide-scrollbar"
       >
         {categories.map((cat, i) => (
           <motion.div

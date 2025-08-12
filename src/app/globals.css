@@ -38,6 +38,29 @@ nextjs-portal {
 }
 
 /* in globals.css */
-::-webkit-scrollbar {
+.hide-scrollbar::-webkit-scrollbar {
   display: none;
+}
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Add this in your global CSS file (e.g., globals.css) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff !important; /* pure white */
+}
+
+/* Optional: softer white */
+.swiper-button-next,
+.swiper-button-prev {
+  color: rgba(255, 255, 255, 0.85) !important; /* dark white */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #ffffff; /* brighter on hover */
+  transform: scale(1.1);
+  transition: all 0.2s ease;
 }

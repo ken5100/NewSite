@@ -5,6 +5,7 @@ import Slider from "./components/Slider";
 import Divider from "./components/Divider";
 import Categories from "./components/Categories";
 import PopularCategories from "./components/PopularItems";
+import EverlaneFavorites from "./components/CatPicks";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
       <Navbar />
       <Slider />
 
-      {/* Background Image Section */}
+      {/* Section with background image */}
       <div
         className="relative bg-cover bg-center"
         style={{
@@ -21,12 +22,15 @@ export default function Home() {
       >
         <Divider />
 
-        {/* Categories with margin */}
-        <div className="mt-6"> {/* adjust mt-6 to desired spacing */}
+        <div className="mt-6">
           <Categories />
-
           <PopularCategories />
         </div>
+      </div>
+
+      {/* White background section */}
+      <div className="bg-white">
+        <EverlaneFavorites />
       </div>
     </div>
   );
