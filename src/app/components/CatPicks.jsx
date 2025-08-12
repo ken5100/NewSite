@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
@@ -51,25 +51,33 @@ const EverlaneFavorites = () => {
           navigation
           pagination={{
             clickable: true,
-            el: ".custom-pagination", // custom pagination container
+            el: ".custom-pagination",
           }}
-          spaceBetween={20}
+          spaceBetween={16}
           loop={true}
           slidesPerView={4}
           slidesPerGroup={1}
           breakpoints={{
-            320: { slidesPerView: 1.5, spaceBetween: 12 },
-            640: { slidesPerView: 2.5, spaceBetween: 16 },
+            320: { slidesPerView: 1.3, spaceBetween: 8 },
+            480: { slidesPerView: 1.8, spaceBetween: 10 },
+            640: { slidesPerView: 2.5, spaceBetween: 12 },
+            768: { slidesPerView: 3, spaceBetween: 16 },
             1024: { slidesPerView: 4, spaceBetween: 20 },
           }}
-          className="pb-10"
+          className="pb-10 [&_.swiper-button-next]:!text-white [&_.swiper-button-prev]:!text-white [&_.swiper-button-next]:!text-3xl [&_.swiper-button-prev]:!text-3xl [&_.swiper-button-next:hover]:scale-110 [&_.swiper-button-prev:hover]:scale-110"
         >
           {images.map((src, index) => (
             <SwiperSlide key={index} className="flex justify-center">
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="h-[500px] w-[300px] object-cover rounded-lg"
+                className="
+                  object-cover rounded-lg
+                  h-[500px] w-[300px]          /* default desktop */
+                  md:h-[500px] md:w-[300px]   /* tablet */
+                  sm:h-[300px] sm:w-[200px]   /* small devices */
+                  xs:h-[250px] xs:w-[160px]   /* extra small */
+                "
               />
             </SwiperSlide>
           ))}
