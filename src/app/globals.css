@@ -28,3 +28,16 @@ body {
 nextjs-portal {
   display: none !important;
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 0px;
+}
+.custom-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* in globals.css */
+::-webkit-scrollbar {
+  display: none;
+}
